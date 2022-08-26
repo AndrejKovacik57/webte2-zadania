@@ -1,0 +1,45 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(178, 175, 175, 0.53);
+}
+#wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#input-wrap{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 50px;
+    display: flex;
+
+}
+#input-wrap button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#canvas-wrap{
+    margin-top: 50px;
+    display: flex;
+}
+
+#winner-wrap{
+    margin-top: 50px;
+    display: flex;
+}
+
+#mojCanvas{
+    border: 1px solid #000000;
+}
+h1{
+    color: forestgreen;
+}

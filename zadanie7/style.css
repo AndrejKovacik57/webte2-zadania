@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#map{
+    height: 75vh;
+    width: 100vw;
+}
+.marker {
+    background-image: url('map-marker.png');
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}

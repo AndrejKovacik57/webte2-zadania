@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Zadanie 2</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+        <a class="h1 navbar-brand" href="#">Zadanie 5</a>
+        <div class="collapse navbar-collapse" >
+            <div class="navbar-nav">
+                <a class="nav-link text-light" href="index.html">Pouzivatelska cast</a>
+                <a class="nav-link text-light" href="popis.html">Popis</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container mt-5">
+    <h3>a.	získať zoznam všetkých vynálezcov</h3>
+    <p><b>[GET]</b> https://site101.webte.fei.stuba.sk/zadaniadsf/zadanie5/inventors.php</p>
+
+    <h3>b.	získať všetky údaje o konkrétnom vynálezcovi spolu so zoznamom vynálezov</h3>
+    <p><b>[GET]</b> https://site101.webte.fei.stuba.sk/zadaniadsf/zadanie5/inventors.php?id=?</p>
+    <p>? je cislo id (napriklad 1)</p>
+
+    <h3>c.	na základe zadaného priezviska získať json s detailnými informáciami o danom vynálezcovi</h3>
+    <p><b>[GET]</b> https://site101.webte.fei.stuba.sk/zadaniadsf/zadanie5/inventors.php?surname=?</p>
+    <p>? je prezvisko (napriklad Banič)</p>
+
+    <h3>d.	na základe uvedeného storočia získať informáciu, ktorý vynález vtedy a kedy vznikol</h3>
+    <p><b>[GET]</b> https://site101.webte.fei.stuba.sk/zadaniadsf/zadanie5/inventors.php?century=?</p>
+    <p>? je storočie (napriklad 19)</p>
+
+    <h3>e.	na základe uvedeného roku získať informáciu, čo sa v danom roku udialo – kto sa narodil, umrel, aký vynález vznikol</h3>
+    <p><b>[GET]</b> https://site101.webte.fei.stuba.sk/zadaniadsf/zadanie5/inventors.php?year=?</p>
+    <p>? je rok (napriklad 1789)</p>
+
+    <h3>f.	vložiť nového vynálezcu minimálne s jedným vynálezcom - nie všetky položky musia byť vyplnené</h3>
+    <p><b>[POST]</b> https://site101.webte.fei.stuba.sk/zadaniadsf/zadanie5/inventors.php</p>
+    <p>death_year a deat_place sa mozu vynechat</p>
+    <p>{<br>
+        "name":"Meno",<br>
+        "surname":"Priezvisko",<br>
+        "description":"nieco dufajme ano",<br>
+        "birth_date":"1958-05-06",<br>
+        "birth_place":"miesto",<br>
+        "death_date":"2001-08-20",<br>
+        "death_place":"miesto",<br>
+        "invention_description":"nieco",<br>
+        "invention_year": "1975"<br>
+        }</p>
+    <p><b>alebo</b></p>
+    <p>{<br>
+        "name":"Meno",<br>
+        "surname":"Priezvisko",<br>
+        "description":"nieco dufajme ano",<br>
+        "birth_date":"1958-05-06",<br>
+        "birth_place":"miesto",<br>
+        "invention_description":"nieco",<br>
+        "invention_year": "1975"<br>
+        }</p>
+    <h3>g.	vložiť nový vynález k už existujúcemu vynálezcovi</h3>
+    <p><b>[POST]</b> https://site101.webte.fei.stuba.sk/zadaniadsf/zadanie5/inventors.php</p>
+    <p>{<br>
+        "inventor_id":"1",<br>
+        "invention_description":"nieco",<br>
+        "invention_year": "1875"<br>
+        }</p>
+    <h3>h.	modifikovať ľubovoľnú položku pri vynálezcovi</h3>
+    <p><b>[PUT]</b> https://site101.webte.fei.stuba.sk/zadaniadsf/zadanie5/inventors.php</p>
+    <p>death_date a death_place môžu byť null</p>
+    <p>{<br>
+        "id":"1",<br>
+        "name":"Meno",<br>
+        "surname":"Priezvisko",<br>
+        "description":"nieco dufajme ano",<br>
+        "birth_date":"1958-05-06",<br>
+        "birth_place":"miesto",<br>
+        "death_date":"2001-08-20",<br>
+        "death_place":"miesto",<br>
+        "invention_description":"nieco",<br>
+        "invention_year": "1975"<br>
+        }</p>
+
+    <h3>i.	vymazať vynálezcu spolu so všetkými údajmi, ktoré k nemu prináležia</h3>
+    <p><b>[DELETE]</b> https://site101.webte.fei.stuba.sk/zadaniadsf/zadanie5/inventors.php?id=?</p>
+    <p>? je cislo id (napriklad 1)</p>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js" integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
+<script src="javascript_admin.js"></script>
+
+
+</body>
+</html>
